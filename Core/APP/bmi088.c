@@ -297,7 +297,7 @@ void MahonyAHRSupdate(float gx, float gy, float gz, float ax, float ay, float az
     Yaw = atan2f(2.0f * (q1 * q2 + q0 * q3), q0q0 + q1q1 - q2q2 - q3q3) * 57.29578f;
 }
 
- 
+
 
 void Start_BMI088_Read_Task_Task(void *argument)
 {

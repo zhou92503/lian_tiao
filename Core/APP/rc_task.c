@@ -102,7 +102,7 @@ void chassis_move(float target_speed, float target_dir, float target_omega)
     {
         speed_out[i] = (int)speed_cal[i];
     }
-    chassis.SetMotorSpeed(speed_out);
+      //  chassis.SetMotorSpeed(speed_out);
 }
 
 
