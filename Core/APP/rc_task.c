@@ -15,6 +15,7 @@
 
 extern osThreadId_t RC_TaskHandle;
 
+Chassis_t chassis = {0.0f, CHASSIS_RADIUS};
 
 SemaphoreHandle_t xDR16DataSemaphore = NULL;
 //FreeRTOS中信号量，用来唯一识别一个信号

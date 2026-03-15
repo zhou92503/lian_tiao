@@ -32,7 +32,7 @@ typedef struct {
     float angle;          // 底盘当前角度（弧度，由IMU/云台yaw提供）
     float Radius;         // 底盘轮距半径
 } Chassis_t;
-Chassis_t chassis = {0.0f, CHASSIS_RADIUS};
+extern Chassis_t chassis;
 
 
 
