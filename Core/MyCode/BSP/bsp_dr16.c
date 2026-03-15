@@ -6,7 +6,6 @@
 #include <string.h>
 
 RC_Remote_t rc_remote={0};
-int16_t motor_target[4]={0};
 
 //DMA双缓冲区（全局，供中断使用）
 uint8_t dr16_rx_buf[2][RC_FRAME_LEN]={0};

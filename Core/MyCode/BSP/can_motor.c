@@ -1,6 +1,6 @@
 #include "can_motor.h"
-#include "usb_vision.h"
-#include "pid.h"
+#include "../APP/usb_vision.h"
+#include "../ALG/pid.h"
 
 Motor_Feedback_t motor_feedback[8]={0};
 //用来存放电机的各个参数

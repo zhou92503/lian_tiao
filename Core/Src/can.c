@@ -21,7 +21,7 @@
 #include "can.h"
 
 /* USER CODE BEGIN 0 */
-#include "can_motor.h"
+#include "../MyCode/BSP/can_motor.h"
 /* USER CODE END 0 */
 
 CAN_HandleTypeDef hcan1;

@@ -7,7 +7,7 @@
 
 #include "main.h"
 #include "can.h"
-#include "pid.h"
+#include "../ALG/pid.h"
 
 #define YAW_MOTOR_ID 0
 #define PITCH_MOTOR_ID 1

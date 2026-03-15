@@ -1,8 +1,8 @@
 #include "usart_print.h"
-#include  "can_motor.h"
+#include "../BSP/can_motor.h"
 #include <stdio.h>
 #include <string.h>
-#include "bmi088.h"
+#include "../Module/bmi088.h"
 #include "cmsis_os.h"
 #include "usart.h"
 

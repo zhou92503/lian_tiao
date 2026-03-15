@@ -33,14 +33,23 @@ enable_language(C ASM)
 
 # Create an executable object type
 add_executable(${CMAKE_PROJECT_NAME}
-        Core/APP/bmi088.c
-        Core/APP/usart_print.c
-        Core/APP/usb_vision.c
-        Core/APP/can_motor.c
-        Core/APP/pid.c
-        Core/APP/bsp_dr16.c
-        Core/APP/rc_task.c
-        Core/APP/Chassis_motor.c
+        Core/MyCode/Module/bmi088.c
+        Core/MyCode/APP/usart_print.c
+        Core/MyCode/APP/usb_vision.c
+        Core/MyCode/BSP/can_motor.c
+        Core/MyCode/ALG/pid.c
+        Core/MyCode/BSP/bsp_dr16.c
+        Core/MyCode/APP/rc_task.c
+        Core/MyCode/Module/Chassis_motor.c
+        Core/MyCode/ALG/filtering.c
+        Core/MyCode/BSP/all.c
+        Core/MyCode/Module/motor.c
+        Core/MyCode/Module/can_motor.c
+        Core/MyCode/Module/bsp_dr16.c
+        Core/MyCode/APP/gimbal.c
+        Core/MyCode/APP/chassis.c
+        Core/MyCode/APP/rc_control.c
+        Core/MyCode/APP/vision.c
 )
 
 # Add STM32CubeMX generated sources
@@ -59,7 +68,11 @@ target_sources(${CMAKE_PROJECT_NAME} PRIVATE
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
-        Core/APP
+        Core/MyCode
+        Core/MyCode/ALG
+        Core/MyCode/BSP
+        Core/MyCode/Module
+        Core/MyCode/APP
 )
 
 # Add project symbols (macros)

@@ -5,7 +5,7 @@
 #include "usart.h"
 #include "usbd_cdc_if.h"
 #include "usb_device.h"
-#include "can_motor.h"
+#include "../BSP/can_motor.h"
 
 
 float target_pitch =0.0f;
@@ -42,7 +42,7 @@ void USB_Vision_ParseEuler(uint8_t *buf,uint16_t len)
     // 格式2：如果视觉只发数值（如 "15.5,-30.2,2.1\n"），注释上面，打开下面
 
     // int ret = sscanf(str_buf, "%f,%f,%f", &target_pitch, &target_yaw, &target_roll);
-    }
+}
 
 /**
   * @brief  USB_Vision_SendEuler

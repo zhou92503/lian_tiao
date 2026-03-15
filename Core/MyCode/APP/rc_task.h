@@ -6,15 +6,26 @@
 #define BMI088_DEMO_RC_TASK_H
 
 #include "FreeRTOS.h"
+#include "pid.h"
 #include "semphr.h"
-#include "bsp_dr16.h"
+#include "../BSP/bsp_dr16.h"
 
-typedef struct {
+typedef struct
+{
     float forward;   ///前进/后退 （-500~500）
     float left;     ///左移/右移（-500~500）
     float rotete;   ///原地旋转 （-500~500）
     float speed;    ///旋转倍率  （0.2、0.5、1.0）
 }Chassis_RC_Cmd_t;
+
+typedef struct {
+    int16_t target;    ///目标转速 RPM
+    int16_t speed;    ////实际转速RPM(从CAN读）
+    int16_t current;   /////输出电流 （PID算出来）
+    PID_HandleTypeDef pid;
+}Motor_t;
+
+extern Motor_t motor[4];
 
 // 新增：硬件参数定义（根据你的实际值修改！）
 #define PI              3.1415926f
@@ -28,7 +39,8 @@ typedef struct {
 
 
 // 新增：底盘结构体（存放角度等关键参数）
-typedef struct {
+typedef struct
+{
     float angle;          // 底盘当前角度（弧度，由IMU/云台yaw提供）
     float Radius;         // 底盘轮距半径
 } Chassis_t;

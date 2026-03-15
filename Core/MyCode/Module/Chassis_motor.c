@@ -1,16 +1,15 @@
 #include "FreeRTOS.h"
 #include "task.h"
-#include  "bsp_dr16.h"
+#include "../BSP/bsp_dr16.h"
 #include "can.h"
 #include "Chassis_motor.h"
 
 #include <sys/types.h>
 
 #include "cmsis_os2.h"
-#include "rc_task.h"
+#include "../APP/rc_task.h"
 
 
-extern int16_t motor_target[4];
 
 static void Chassis_CAN_Send_M3508(int16_t motor1,int16_t motor2,int16_t motor3,int16_t motor4)
 {
@@ -62,8 +61,8 @@ void Start_Chassis_CAN_Task(void *argument)
 
     for(;;)
     {
-        Chassis_CAN_Send_M3508(motor_target[0],motor_target[1],motor_target[2],motor_target[3]);
 
+        Chassis_CAN_Send_M3508(motor[0].current,motor[1].current,motor[2].current,motor[3].current);
 
         osDelay(5);
     }

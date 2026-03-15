@@ -23,8 +23,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
-#include "bsp_dr16.h"
-#include "rc_task.h"
+#include "../MyCode/BSP/bsp_dr16.h"
+#include "APP/rc_task.h"
 #include "task.h"
 #include "FreeRTOS.h"
 
