@@ -308,7 +308,6 @@ void Start_BMI088_Read_Task_Task(void *argument)
 
         osThreadTerminate(osThreadGetId());   //osThreadGetId() 获取当前运行任务的 ID，
                                               //osThreadTerminate 终止这个任务（相当于 “杀死” 当前任务）；
-
         return;
 
     }

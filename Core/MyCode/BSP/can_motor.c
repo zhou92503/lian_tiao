@@ -57,7 +57,6 @@ void CAN_Motor_SetVoltage(int16_t yaw_current,int16_t pitch_current)
 
 void Gimbal_Init(void)
 {
-
     // Yaw轴位置环：kp=8, ki=0, kd=0.1, 输出限幅±500rpm, 积分限幅0
     PID_Init(&pid_yaw_pos, 8.0f, 0.0f, 0.1f, 500.0f, -500.0f, 0.0f, 0.0f);
     // Yaw轴速度环：kp=20, ki=0.5, kd=0, 输出限幅±16384（最大电流）, 积分限幅±1000
@@ -67,7 +66,6 @@ void Gimbal_Init(void)
     PID_Init(&pid_pitch_pos, 10.0f, 0.0f, 0.2f, 300.0f, -300.0f, 0.0f, 0.0f);
     // Pitch轴速度环：kp=25, ki=0.8, kd=0, 输出限幅±16384, 积分限幅±1000
     PID_Init(&pid_pitch_speed, 25.0f, 0.8f, 0.0f, 16384.0f, -16384.0f, 1000.0f, -1000.0f);
-
 }
 
 

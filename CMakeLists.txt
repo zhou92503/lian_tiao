@@ -44,12 +44,9 @@ add_executable(${CMAKE_PROJECT_NAME}
         Core/MyCode/ALG/filtering.c
         Core/MyCode/BSP/all.c
         Core/MyCode/Module/motor.c
-        Core/MyCode/Module/can_motor.c
-        Core/MyCode/Module/bsp_dr16.c
-        Core/MyCode/APP/gimbal.c
-        Core/MyCode/APP/chassis.c
-        Core/MyCode/APP/rc_control.c
-        Core/MyCode/APP/vision.c
+        Core/MyCode/Module/dr16.c
+        Core/MyCode/APP/gimbal_ctrl.c
+        Core/MyCode/APP/chassis_ctrl.c
 )
 
 # Add STM32CubeMX generated sources

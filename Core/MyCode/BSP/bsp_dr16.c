@@ -27,7 +27,6 @@ void DR16_Init(UART_HandleTypeDef *huart)
 }
 
 
-
 /************************ 核心解析函数（仅摇杆+开关，严格对标手册位域） ************************/
 // 入参：pData→DMA接收的18字节原始数据缓冲区
 void DR16_Parse(uint8_t *pData)
