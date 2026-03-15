@@ -337,6 +337,11 @@ void Start_BMI088_Read_Task_Task(void *argument)
         }
 
 
+
+
+
+
+
         BMI088_ReadAcceleration(&ax,&ay,&az);//分别得到各个方向的角速度（单位rad/s)
         BMI088_ReadGyroscope(&gx,&gy,&gz);  //分别得到各个方向的加速度（单位g)
 
