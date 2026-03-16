@@ -21,7 +21,7 @@
 #include "can.h"
 
 /* USER CODE BEGIN 0 */
-#include "../MyCode/BSP/can_motor.h"
+#include "motor.h"
 /* USER CODE END 0 */
 
 CAN_HandleTypeDef hcan1;
@@ -238,7 +238,8 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
 }
 
 
-void CAN_Filter_Init(void) {
+void CAN_Filter_Init(void)
+{
   CAN_FilterTypeDef can_filter;
 
   can_filter.FilterMode = CAN_FILTERMODE_IDMASK;

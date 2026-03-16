@@ -1,5 +1,17 @@
-#include "can_motor.h"
+#include "gimbal_ctrl.h"
+#include "motor.h"
+
+
+Motor_Feedback_t motor_feedback[8]={0};
+//用来存放电机的各个参数
+
+
+float target_yaw_deg=0.0f;  //视觉目标Yaw角度（来自USB)
+float target_pitch_deg=0.0f;  //视觉目标Pitch角度
+
 #define MOTOR_ANGLE_TO_DEG(angle)  ((float)angle/8192.0f*360.0f)
+
+
 
 ///************************云台pid解算函数******************///////////
 void Gimbal_PID_Control(void)
@@ -26,6 +38,7 @@ void Gimbal_PID_Control(void)
     // 4. CAN发送电流指令
     CAN_Motor_SetVoltage(yaw_current, pitch_current);
 }
+
 
 
 /////////****************************云台pid的参数***********************//////////

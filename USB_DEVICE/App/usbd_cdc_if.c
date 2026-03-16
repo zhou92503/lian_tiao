@@ -21,8 +21,9 @@
 /* Includes ------------------------------------------------------------------*/
 #include "usbd_cdc_if.h"
 
+#include "all.h"
+
 /* USER CODE BEGIN INCLUDE */
-#include "APP/usb_vision.h"
 /* USER CODE END INCLUDE */
 
 /* Private typedef -----------------------------------------------------------*/

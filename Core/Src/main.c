@@ -17,6 +17,7 @@
   */
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
+#include "stm32f4xx_hal.h"
 #include "main.h"
 #include "cmsis_os.h"
 #include "can.h"
@@ -25,6 +26,7 @@
 #include "usart.h"
 #include "usb_device.h"
 #include "gpio.h"
+
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */

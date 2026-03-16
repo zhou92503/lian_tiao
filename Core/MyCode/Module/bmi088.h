@@ -65,4 +65,5 @@ typedef struct
 extern osMessageQueueId_t BMI088DataQueueHandle;
 
 
+
 #endif //BMI088_DEMO_BMI088_H

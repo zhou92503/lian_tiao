@@ -1,15 +1,12 @@
-#include "usart_print.h"
-#include "../BSP/can_motor.h"
+
+
+
 #include <stdio.h>
 #include <string.h>
-#include "../Module/bmi088.h"
+
+#include "bmi088.h"
 #include "cmsis_os.h"
 #include "usart.h"
-
-
-
-
-
 
 void Start_UART_Print_TaskTask(void *argument)
 {

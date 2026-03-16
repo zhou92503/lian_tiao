@@ -2,8 +2,19 @@
 
 #include <math.h>
 
+
+
 // 快速计算1.0 / sqrt(x)，著名的“平方根倒数速算法”，比库函数快很多
-static float invSqrt(float x)
+
+float Yaw, Pitch, Roll;
+
+// 全局四元数，初始化为无旋转状态（代表机体坐标系与地理坐标系对齐）
+float q0 = 1.0f, q1 = 0.0f, q2 = 0.0f, q3 = 0.0f;
+// 误差积分项，用于消除稳态误差
+float exInt = 0.0f, eyInt = 0.0f, ezInt = 0.0f;
+// 弧度转角度
+
+float invSqrt(float x)
 {
     float halfx = 0.5f * x;
     float y = x;
@@ -14,7 +25,7 @@ static float invSqrt(float x)
     return y;
 }
 
-// 核心姿态更新函数
+////*************************以下是Mahony姿态角算法************************/////
 void MahonyAHRSupdate(float gx, float gy, float gz, float ax, float ay, float az)
 
    ///加速度的单位是g,角速度的单位是rad/s
